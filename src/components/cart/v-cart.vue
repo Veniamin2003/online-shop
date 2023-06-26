@@ -89,6 +89,7 @@ export default {
   m-bottom: 100px;
   width: 100%;
   &__total {
+    z-index: 5;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -102,6 +103,7 @@ export default {
     }
 
   .total__name {
+
     margin-right: $margin*2;
   }
 

@@ -1,9 +1,10 @@
 <template>
-  <v-main-wrapper />
+  <v-main-wrapper/>
 </template>
 
 <script>
 import vMainWrapper from "./components/v-main-wrapper.vue"
+
 export default {
   name: 'App',
   components: {
@@ -19,6 +20,19 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  //margin: 60px 0 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  list-style: none;
+  min-height: 100vh;
+}
+a, u {
+  text-decoration: none;
 }
 </style>
