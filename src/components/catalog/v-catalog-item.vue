@@ -1,9 +1,10 @@
 <template>
   <div class="v-catalog-item ">
-    <img class="v-catalog-item__image" :src=" require('../assets/images/' + product_data.image) " alt="">
+    <img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image) " alt="">
     <p class="v-catalog-item__name">{{product_data.name}}</p>
-    <p class="v-catalog-item__price">{{product_data.price}} р.</p>
-    <button class="v-catalog-item__add_to_cart_btn btn" @click="sendDataToParents">Add</button>
+    <p class="v-catalog-item__price">{{product_data.price}} руб.</p>
+    <button class="v-catalog-item__add_to_cart_btn btn"
+            @click="addToCart">В корзину</button>
   </div>
 </template>
 
@@ -25,8 +26,8 @@ export default {
   },
   computed: {},
   methods: {
-    sendDataToParents() {
-      this.$emit('sendArticle', this.product_data.article)
+    addToCart() {
+      this.$emit('addToCart', this.product_data);
     }
   }
 }
